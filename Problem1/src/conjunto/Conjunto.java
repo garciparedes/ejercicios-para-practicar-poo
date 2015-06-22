@@ -139,10 +139,18 @@ public class Conjunto<E> {
 		return conjuntoFinal;
 	}
 	
-	/*
 	
 	
-	public static Conjunto union(Conjunto conjuntoA, Conjunto conjuntoB ){
+	/**
+	 * Metodo estaticoque genera la interseccion de dos conjuntos.
+	 * 
+	 * A partir del conjuntoA junto con conjuntoB se genera
+	 * la interseccion de conjuntos y se devuelve un nuevo Conjunto.
+	 * 
+	 * @param conjuntoB Segundo Conjunto necesario para la interseccion.
+	 * @return conjuntoFinal Conjunto interseccion de conjunto invocante y conjuntoB.
+	 */
+	public static <E> Conjunto union(Conjunto<E> conjuntoA, Conjunto<E> conjuntoB ){
 		Conjunto<E> conjuntoFinal = (Conjunto<E>) conjuntoA.clone();
 		for (E element : conjuntoB.getArrayList()){
 			conjuntoFinal.agrega(element);
@@ -151,7 +159,7 @@ public class Conjunto<E> {
 		
 	}
 	
-	public static Conjunto interseccion(Conjunto conjuntoA, Conjunto conjuntoB){
+	public static <E> Conjunto interseccion(Conjunto<E> conjuntoA, Conjunto<E> conjuntoB){
 		Conjunto<E> conjuntoFinal = new Conjunto();
 		for (E element : conjuntoA.getArrayList()){
 			if (conjuntoB.esta(element)){
@@ -160,7 +168,7 @@ public class Conjunto<E> {
 		}
 		return conjuntoFinal;
 	}
-	*/
+	
 	
 	
 	/**

@@ -36,11 +36,12 @@ public class Main {
 		System.out.println("Se comprueba si esta 3 en conjunto A: " + conjuntoA.esta(3));
 		
 
-		Conjunto<Integer> conjuntoUnion = conjuntoA.union(conjuntoB);
+		//Conjunto<Integer> conjuntoUnion = conjuntoA.union(conjuntoB);
+		Conjunto<Integer> conjuntoUnion = Conjunto.union(conjuntoA, conjuntoB);
 		System.out.println("Se crea conjunto Union de A y B: " + conjuntoUnion);
 
-		
-		Conjunto<Integer> conjuntoInterseccion = conjuntoA.interseccion(conjuntoB);
+		//Conjunto<Integer> conjuntoInterseccion = conjuntoA.interseccion(conjuntoB);
+		Conjunto<Integer> conjuntoInterseccion = Conjunto.interseccion(conjuntoA, conjuntoB);
 		System.out.println("Se crea conjunto Interseccion de A y B: " + conjuntoInterseccion);
 	}
 
