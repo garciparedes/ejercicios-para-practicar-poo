@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package main;
+
+import conjunto.Conjunto;
+
+/**
+ * @author garciparedes
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conjunto<Integer> conjunto = new Conjunto();
+	}
+
+}

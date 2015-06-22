@@ -1,0 +1,161 @@
+package conjunto;
+
+import java.util.ArrayList;
+
+/**
+ * Clase Conjunto, sirve para representar conjuntos en java.
+ * Consta de las operaciones agrega, elimina, esta, union y interseccion.
+ * 
+ * @author garciparedes
+ *
+ * @param <E>
+ */
+public class Conjunto<E> {
+	
+	
+	private ArrayList<E> arrayList;
+	
+	
+	/**
+	 * Constructor principal de la clase. Es quien inicializa la clase.
+	 * Sin este método la clase no funcionaría.
+	 * 
+	 */
+	public Conjunto(){
+		super();
+		arrayList = new ArrayList<E>();
+	}
+	
+	
+	/**
+	 * Constructor principal de la clase. Es quien inicializa la clase.
+	 * Sin este método la clase no funcionaría.
+	 * 
+	 * @param elements Lista de elementos con los que inicializar el conjunto.
+	 */
+	public Conjunto(E... elements){
+		this();
+		for (E element : elements){
+			arrayList.add(element);
+		}
+	}
+	
+	
+	/**
+	 * Getter de arrayList.
+	 * 
+	 * @return arrayList Devuelve una lista ArrayList con los elementos contenidos en el Conjunto.
+	 */
+	public ArrayList<E> getArrayList(){
+		return arrayList;
+	}
+
+	
+	/**
+	 * Procedimiento agrega.
+	 * 
+	 * Es el encargado de agregar los elementos al Conjunto.
+	 * 
+	 * @param element Elemento a agregar.
+	 */
+	public void agrega(E element){
+		
+		if (!esta(element)){
+			getArrayList().add(element);
+		}
+	}
+	
+	
+	/**
+	 * Procedimiento elimina.
+	 *
+	 * Es el encargado de eliminar elementos del conjunto.
+	 * 
+	 * @param element Elemento a eliminar.
+	 */
+	public void elimina(E element){
+		getArrayList().remove(element);
+	}
+	
+	
+	/**
+	 * Metodo esta.
+	 * 
+	 * Este metodo se encarga de comprobar si un elemento esta o no en el conjunto.
+	 * 
+	 * @param element Elemento a comprobar.
+	 * @return boolean Boolean con el que contiene la pertenencia de element al Conjunto.
+	 */
+	public boolean esta(E element){
+		return getArrayList().contains(element);
+	}
+	
+	
+	/**
+	 * Metodo que genera la union de dos conjuntos.
+	 * 
+	 * A partir del conjunto invocante junto con conjuntoB se genera
+	 * la union de conjuntos y se devuelve un nuevo Conjunto.
+	 * 
+	 * @param conjuntoB Segundo Conjunto necesario para la union.
+	 * @return conjuntoFinal Conjunto union de conjunto invocante y conjuntoB.
+	 */
+	public Conjunto<E> union(Conjunto<E> conjuntoB ){
+		Conjunto<E> conjuntoFinal = new Conjunto(getArrayList());
+		for (E element : conjuntoB.getArrayList()){
+			//conjuntoFinal.agrega(element);
+		}
+		return conjuntoFinal;
+		
+	}
+	
+	
+	/**
+	 * Metodo que genera la interseccion de dos conjuntos.
+	 * 
+	 * A partir del conjunto invocante junto con conjuntoB se genera
+	 * la interseccion de conjuntos y se devuelve un nuevo Conjunto.
+	 * 
+	 * @param conjuntoB Segundo Conjunto necesario para la interseccion.
+	 * @return conjuntoFinal Conjunto interseccion de conjunto invocante y conjuntoB.
+	 */
+	public Conjunto<E> interseccion(Conjunto<E> conjuntoB){
+		return conjuntoB;
+		
+	}
+	
+	/*
+	
+	
+	public static Conjunto union(Conjunto conjuntoA, Conjunto conjuntoB ){
+		return conjuntoB;
+		
+	}
+	
+	public static Conjunto interseccion(Conjunto conjuntoA, Conjunto conjuntoB){
+		return conjuntoB;
+		
+	}
+	*/
+	
+	
+	/**
+     * Metodo que sobreescribe el metodo toString() de la clase <code>Object</code>.
+     *
+     * Devuelve una cadena de caracteres con el siguiente formato:
+     * Nombre: xxxx  Descripcion: xxxxx
+     *
+     * @return String con el contenido de <code>Producto</code>.
+     */
+    @Override
+    public String toString() {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	for (E element : getArrayList()){
+    		sb.append(element.toString());
+    		//sb.append(", ");
+    	}
+    	
+        return sb.toString();
+    }
+}
