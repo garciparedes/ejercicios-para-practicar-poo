@@ -1,6 +1,6 @@
 package number;
 
-import vector.Operations;
+import vector.VectorOps;
 
 /**
  * Clase que modela numeros complejos.
@@ -10,7 +10,7 @@ import vector.Operations;
  * @author garciparedes
  *
  */
-public class Complejo implements Operations<Complejo>{
+public class Complejo implements VectorOps<Complejo>{
 	
 	private static final int SQUARE = 2;
 	
@@ -131,39 +131,6 @@ public class Complejo implements Operations<Complejo>{
 		return result;
 	}
 	
-	/**
-	 * Funcion estatica que suma dos objetos de tipo Complejo
-	 * 
-	 * @param complexA Segundo Complejo a sumar.
-	 * @param complexB Segundo Complejo a sumar.
-	 * @return Complejo con el valor de la suma de complexA + complexB.
-	 */
-	public static Complejo suma(Complejo complexA,Complejo complexB){
-		Complejo result = new Complejo();
-		
-		result.setReal(complexA.getReal() + complexB.getReal());
-		result.setImag(complexA.getImag() + complexB.getImag());
-
-		return result;
-	}
-	
-
-	/**
-	 * Funcion estatica que resta dos objetos de tipo Complejo
-	 * 
-	 * @param complexA Segundo Complejo a sumar.
-	 * @param complexB Segundo Complejo a restar.
-	 * @return Complejo con el valor de la restar complexA - complexB.
-	 */
-	public static Complejo resta(Complejo complexA, Complejo complexB){
-		Complejo result = new Complejo();
-		
-		result.setReal(complexA.getReal() - complexB.getReal());
-		result.setImag(complexA.getImag() - complexB.getImag());
-
-		return result;
-	}
-	
 	
 	/**
 	 * Funcion que devuelve el modulo de Complejo.
@@ -199,7 +166,4 @@ public class Complejo implements Operations<Complejo>{
 	public String toString(){
 		return (real + PLUS + imag + IMAGINARY) ;	
 	}
-
-
-
 }

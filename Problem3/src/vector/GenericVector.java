@@ -11,24 +11,26 @@ import java.util.Collection;
  * @author garciparedes
  *
  */
-public class MyVector<E extends Operations<E>> implements Operations<MyVector> {
+public class GenericVector<E extends VectorOps<E>> 
+	//implements Operations<MyVector> 
+	{
 
-	private ArrayList<E> vectorList;
+	private ArrayList<E>  vectorList;
 	
 	
-	public MyVector(){
+	public GenericVector(){
 		vectorList = new ArrayList<E>();
 	}
 	
 	
-	public MyVector(int dimen){
+	public GenericVector(int dimen){
 		vectorList = new ArrayList<E>(dimen);
 	}
 	
 	
-	public MyVector( E... elements){
+	public GenericVector( E... elements){
 		this();
-		 
+				 
 		for (E element: elements){
 				addValue(element);
 		}
@@ -46,7 +48,7 @@ public class MyVector<E extends Operations<E>> implements Operations<MyVector> {
 	}
 	
 	
-	public <E> Operations getValue(int pos){
+	public E getValue(int pos){
 		return getVector().get(pos);
 	}
 	
@@ -56,27 +58,27 @@ public class MyVector<E extends Operations<E>> implements Operations<MyVector> {
 	}
 
 
-	@Override
+	//@Override
 	public double getModulo() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 
-	@Override
-	public MyVector<E> suma(MyVector vector) {
-		MyVector<E> result = new MyVector<E>(getDimen());
+	//@Override
+	public GenericVector<E> suma(GenericVector<E> vector) {
+		GenericVector<E> result = new GenericVector<E>(getDimen());
 		
 		for (E element: getVector()){
-			result.addValue(element.suma( (E) vector.getValue(0)));
+			result.addValue(element.suma(vector.getValue(0)));
 		}
 		return result;
 	}
 
 
-	@Override
-	public MyVector resta(MyVector vector) {
-		MyVector<E> result = new MyVector<E>(getDimen());
+	//@Override
+	public GenericVector<E> resta(GenericVector<E> vector) {
+		GenericVector<E> result = new GenericVector<E>(getDimen());
 		
 		for (E element: getVector()){
 			result.addValue(element.resta( (E) vector.getValue(0)));

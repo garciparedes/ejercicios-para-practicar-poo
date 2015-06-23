@@ -4,7 +4,7 @@
 package main;
 
 import number.Complejo;
-import vector.MyVector;
+import vector.GenericVector;
 
 /**
  * @author garciparedes
@@ -18,7 +18,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		MyVector<Complejo> vectorA = new MyVector<Complejo>(3);
+		GenericVector<Complejo> vectorA = new GenericVector<Complejo>(3);
 		vectorA.addValue(new Complejo(3,4));
 		vectorA.addValue(new Complejo(3,4));
 		vectorA.addValue(new Complejo(3,4));
@@ -27,7 +27,7 @@ public class Main {
 		System.out.println();
 
 		
-		MyVector<Complejo> vectorB = new MyVector<Complejo>(3);
+		GenericVector<Complejo> vectorB = new GenericVector<Complejo>(3);
 		vectorB.addValue(new Complejo(3,4));
 		vectorB.addValue(new Complejo(3,4));
 		vectorB.addValue(new Complejo(3,4));
