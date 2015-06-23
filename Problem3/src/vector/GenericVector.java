@@ -11,9 +11,7 @@ import java.util.Collection;
  * @author garciparedes
  *
  */
-public class GenericVector<E extends VectorOps<E>> 
-	//implements Operations<MyVector> 
-	{
+public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericVector<E>>{
 
 	private ArrayList<E>  vectorList;
 	
@@ -58,14 +56,14 @@ public class GenericVector<E extends VectorOps<E>>
 	}
 
 
-	//@Override
+	@Override
 	public double getModulo() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 
-	//@Override
+	@Override
 	public GenericVector<E> suma(GenericVector<E> vector) {
 		GenericVector<E> result = new GenericVector<E>(getDimen());
 		
@@ -76,7 +74,7 @@ public class GenericVector<E extends VectorOps<E>>
 	}
 
 
-	//@Override
+	@Override
 	public GenericVector<E> resta(GenericVector<E> vector) {
 		GenericVector<E> result = new GenericVector<E>(getDimen());
 		
