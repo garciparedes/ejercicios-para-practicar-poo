@@ -166,4 +166,28 @@ public class Complejo implements VectorOps<Complejo>{
 	public String toString(){
 		return (real + PLUS + imag + IMAGINARY) ;	
 	}
+
+
+	/**
+	 * Funcion que multiplica el objecto Complejo invocante por value.
+	 * 
+	 * @param value Real por el que se multiplica.
+	 * @return Complejo con el valor de la restar del invocante * value.
+	 */
+	@Override
+	public Complejo multiplicacion(double value) {		
+		return new Complejo(value * getReal(), value * getImag());
+	}
+
+
+	/**
+	 * Funcion que resta el objecto Complejo invocante entre value.
+	 * 
+	 * @param value Real entre el que se divide.
+	 * @return Complejo con el valor de la restar del invocante / value.
+	 */
+	@Override
+	public Complejo division(double value) {
+		return new Complejo(getReal()/value, getImag()/value);
+	}
 }

@@ -5,6 +5,7 @@ package vector;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 
 /**
@@ -27,12 +28,10 @@ public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericV
 	
 	
 	public GenericVector( E... elements){
-		this();
-				 
+		this();				 
 		for (E element: elements){
 				addValue(element);
 		}
-		
 	}
 	
 	
@@ -54,21 +53,19 @@ public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericV
 	public ArrayList<E> getVector(){	
 		return vectorList;
 	}
-
-
-	@Override
-	public double getModulo() {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	public Iterator<E> getIterator(){
+		return vectorList.iterator();
 	}
 
 
 	@Override
 	public GenericVector<E> suma(GenericVector<E> vector) {
-		GenericVector<E> result = new GenericVector<E>(getDimen());
-		
-		for (E element: getVector()){
-			result.addValue(element.suma(vector.getValue(0)));
+		GenericVector<E> result = new GenericVector<E>(getDimen());	
+		for (int i = 0; i < getDimen(); i++){
+			result.addValue(
+					getValue(i).suma(vector.getValue(i))
+			);
 		}
 		return result;
 	}
@@ -76,10 +73,11 @@ public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericV
 
 	@Override
 	public GenericVector<E> resta(GenericVector<E> vector) {
-		GenericVector<E> result = new GenericVector<E>(getDimen());
-		
-		for (E element: getVector()){
-			result.addValue(element.resta( (E) vector.getValue(0)));
+		GenericVector<E> result = new GenericVector<E>(getDimen());	
+		for (int i = 0; i < getDimen(); i++){
+			result.addValue(
+					getValue(i).resta(vector.getValue(i))
+			);
 		}
 		return result;
 	}
@@ -87,18 +85,33 @@ public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericV
 	
 	@Override
 	public String toString(){
-		StringBuilder sb = new StringBuilder();
-		
-		sb.append("(");
-		
+		StringBuilder sb = new StringBuilder();		
+		sb.append("(");	
 		for (E element: getVector()){
 			sb.append(element);
 			sb.append(" ");
 		}
 		sb.append(")");
-
-		
 		return sb.toString();
 	}
-	
+
+
+	@Override
+	public GenericVector<E> multiplicacion(double value) {
+		GenericVector<E> result = new GenericVector<E>(getDimen());
+		for(E element : getVector()){
+			result.addValue(element.multiplicacion(value));
+		}
+		return result;
+	}
+
+
+	@Override
+	public GenericVector<E> division(double value) {
+		GenericVector<E> result = new GenericVector<E>(getDimen());	
+		for(E element : getVector()){
+			result.addValue(element.division(value));
+		}		
+		return result;
+	}
 }

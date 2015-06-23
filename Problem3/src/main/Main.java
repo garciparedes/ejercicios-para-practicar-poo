@@ -26,6 +26,11 @@ public class Main {
 		System.out.println(vectorA);
 		System.out.println();
 
+		System.out.println(vectorA.multiplicacion(3));
+		System.out.println();
+		
+		System.out.println(vectorA.division(2));
+		System.out.println();
 		
 		GenericVector<Complejo> vectorB = new GenericVector<Complejo>(3);
 		vectorB.addValue(new Complejo(3,4));
