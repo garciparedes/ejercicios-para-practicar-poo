@@ -1,5 +1,7 @@
 package number;
 
+import vector.Operations;
+
 /**
  * Clase que modela numeros complejos.
  * Consta de métodos tanto para sumar y restar
@@ -8,12 +10,12 @@ package number;
  * @author garciparedes
  *
  */
-public class Complejo {
+public class Complejo implements Operations<Complejo>{
 	
 	private static final int SQUARE = 2;
 	
 	private static final String IMAGINARY = "i";
-	private static final String PLUS = " + ";
+	private static final String PLUS = "+";
 
 	
 	private double real;
@@ -101,6 +103,7 @@ public class Complejo {
 	 * @param complex Segundo Complejo a sumar.
 	 * @return Complejo con el valor de la suma del invocante + complex.
 	 */
+	@Override
 	public Complejo suma(Complejo complex){
 		Complejo result = new Complejo();
 		
@@ -118,6 +121,7 @@ public class Complejo {
 	 * @param complex Segundo Complejo a restar.
 	 * @return Complejo con el valor de la restar del invocante - complex.
 	 */
+	@Override
 	public Complejo resta(Complejo complex){
 		Complejo result = new Complejo();
 		
@@ -195,5 +199,7 @@ public class Complejo {
 	public String toString(){
 		return (real + PLUS + imag + IMAGINARY) ;	
 	}
+
+
 
 }
