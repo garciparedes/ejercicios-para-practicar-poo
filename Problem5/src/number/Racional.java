@@ -8,10 +8,27 @@ package number;
  */
 public class Racional {
 	
+	
+	/**
+	 * ******************************** Atributos de la clase ********************************
+	 */
+	
+	
 	private static final int UNIDAD = 1;
+	
+	
+	/**
+	 * ******************************** Atributos del Objeto ********************************
+	 */
+	
 	
 	private int numerador;
 	private int denominador;
+	
+	
+	/**
+	 * ******************************** Constructores ********************************
+	 */
 	
 	
 	/**
@@ -59,6 +76,9 @@ public class Racional {
 		reducir();
 	}
 	
+	/**
+	 * ******************************** Getters y Setters ********************************
+	 */
 	
 	/**
 	 * Setter del numerador.
@@ -113,12 +133,19 @@ public class Racional {
 	
 	
 	/**
-	 * 
-	 * @return
+	 * Funcion que comprueba si el objeto invocante es entero.
+	 *  
+	 * @return isEntero boolean Valor booleano sobre si es o no entero.
 	 */
 	public boolean esEntero(){
 		return getDenominador() == 1;
 	}
+	
+	
+	/**
+	 * ******************************** Metodos Publicos ********************************
+	 */
+	
 	
 	/**
 	 * Procedimiento que se encarga de reducir
@@ -182,10 +209,13 @@ public class Racional {
 		} else {
 			assert(!esEntero());
 			return (getNumerador() + "/" + getDenominador());
-
 		}
 	}
 
+	
+	/**
+	 * ******************************** Metodos Privados ********************************
+	 */
 
 	
 	/**

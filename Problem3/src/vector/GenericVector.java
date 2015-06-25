@@ -4,7 +4,6 @@
 package vector;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 
 
@@ -27,6 +26,7 @@ public class GenericVector<E extends VectorOps<E>> implements VectorOps<GenericV
 	}
 	
 	
+	@SafeVarargs
 	public GenericVector( E... elements){
 		this();				 
 		for (E element: elements){
