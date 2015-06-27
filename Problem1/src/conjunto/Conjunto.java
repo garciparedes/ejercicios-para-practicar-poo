@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @param <E>
  */
-public class Conjunto<E> {
+public class Conjunto<E> implements Cloneable{
 	
 	
 	private ArrayList<E> arrayList;
