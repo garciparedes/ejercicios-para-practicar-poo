@@ -36,6 +36,8 @@ public class Conjunto<E> {
 	public Conjunto(E... elements){
 		this();
 		for (E element : elements){
+			
+			assert(element != null);
 			arrayList.add(element);
 		}
 	}
@@ -47,6 +49,8 @@ public class Conjunto<E> {
 	 * @return arrayList Devuelve una lista ArrayList con los elementos contenidos en el Conjunto.
 	 */
 	public ArrayList<E> getArrayList(){
+		assert (arrayList != null);
+
 		return arrayList;
 	}
 	
@@ -55,7 +59,10 @@ public class Conjunto<E> {
 	 * 
 	 * @return array Devuelve una lista E[] con los elementos contenidos en el Conjunto.
 	 */
+	@SuppressWarnings("unchecked")
 	public E[] getArray(){
+		assert (arrayList != null);
+
 		return (E[]) arrayList.toArray();
 	}
 
@@ -69,6 +76,8 @@ public class Conjunto<E> {
 	 * @param element Elemento a agregar.
 	 */
 	public void agrega(E element){
+		assert (element != null);
+		
 		if (!esta(element)){
 			getArrayList().add(element);
 		}
@@ -83,6 +92,8 @@ public class Conjunto<E> {
 	 * @param element Elemento a eliminar.
 	 */
 	public void elimina(E element){
+		assert (element != null);
+
 		if (esta(element)){
 			getArrayList().remove(element);
 		}
@@ -98,6 +109,8 @@ public class Conjunto<E> {
 	 * @return boolean Boolean con el que contiene la pertenencia de element al Conjunto.
 	 */
 	public boolean esta(E element){
+		assert (element != null);
+
 		return getArrayList().contains(element);
 	}
 	
@@ -114,6 +127,7 @@ public class Conjunto<E> {
 	public Conjunto<E> union(Conjunto<E> conjuntoB ){
 		Conjunto<E> conjuntoFinal = (Conjunto<E>) conjuntoB.clone();
 		for (E element : getArrayList()){
+			assert (element != null);
 			conjuntoFinal.agrega(element);
 		}
 		return conjuntoFinal;
@@ -132,6 +146,7 @@ public class Conjunto<E> {
 	public Conjunto<E> interseccion(Conjunto<E> conjuntoB){
 		Conjunto<E> conjuntoFinal = new Conjunto<E>();
 		for (E element : getArrayList()){
+			assert (element != null);
 			if (conjuntoB.esta(element)){
 				conjuntoFinal.agrega(element);
 			}
@@ -153,6 +168,7 @@ public class Conjunto<E> {
     	StringBuilder sb = new StringBuilder();
     	
     	for (E element : getArrayList()){
+    		assert (element != null);
     		sb.append(element.toString());
     		sb.append(" ");
     	}
