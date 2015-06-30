@@ -14,7 +14,7 @@ import calendar.MyGregorianCalendar;
  * @author garciparedes
  *
  */
-public class EmpleadoFijo extends BaseEmpleadoSueldoMensual {
+public class EmpleadoFijo extends BaseEmpleadoMensual {
 
 	private double complemento;
 	

@@ -12,7 +12,7 @@ import calendar.MyGregorianCalendar;
  * @author garciparedes
  *
  */
-public abstract class BaseEmpleadoSueldoMensual extends BaseEmpleadoSueldo {
+public abstract class BaseEmpleadoMensual extends Empleado {
 
 	private static final String FECHA_ALTA = "Fecha Alta: ";
 	private double sueldo;
@@ -27,7 +27,7 @@ public abstract class BaseEmpleadoSueldoMensual extends BaseEmpleadoSueldo {
 	 * @param sueldo Sueldo base del empleado.
 	 * @param fechaAlta Fecha de alta del empleado.
 	 */
-	public BaseEmpleadoSueldoMensual(String nombre, int edad, String nif
+	public BaseEmpleadoMensual(String nombre, int edad, String nif
 			, double sueldo, MyGregorianCalendar fechaAlta) {
 		
 		super(nombre, edad, nif);
