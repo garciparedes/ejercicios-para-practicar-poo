@@ -6,12 +6,11 @@ package empleado;
  * @author garciparedes
  *
  */
-public abstract class Empleado {
+public class Empleado {
 	
 	private static final String NOMBRE = "Nombre: ";
 	private static final String EDAD = "Edad: ";
 	private static final String NIF = "NIF: ";
-	private static final String SUELDO = "Sueldo: ";
 
 	private String nombre;
 	private int edad;
@@ -64,16 +63,6 @@ public abstract class Empleado {
 		return nif;
 	}
 	
-	
-	/**
-	 * Funcion encargada de calcular el
-	 * sueldo del empleado.
-	 * 
-	 * @return sueldo Double con el sueldo del empleado.
-	 */
-	public abstract double getSueldo();
-	
-	
 	/**
 	 * Funcion encargado de transformar
 	 * en cadena de caracteres el objeto.
@@ -83,7 +72,7 @@ public abstract class Empleado {
 		return (NOMBRE + getNombre()
 				+ EDAD + getEdad()
 				+ NIF + getNif()
-				+ SUELDO + getSueldo()
 		);
 	}
+	
 }

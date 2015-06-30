@@ -7,7 +7,7 @@ package empleado;
  * @author garciparedes
  *
  */
-public class EmpleadoPorHoras extends Empleado {
+public class EmpleadoPorHoras extends BaseEmpleadoSueldo {
 
 	private double precioHora;
 	private int numHoras;

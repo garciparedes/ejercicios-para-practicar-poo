@@ -12,7 +12,7 @@ import calendar.MyGregorianCalendar;
  * @author garciparedes
  *
  */
-public class EmpleadoTemporal extends BaseEmpleadoMensual {
+public class EmpleadoTemporal extends BaseEmpleadoSueldoMensual {
 
 	private static final String FECHA_BAJA = "Fecha Baja: ";
 	
