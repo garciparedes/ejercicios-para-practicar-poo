@@ -4,6 +4,7 @@
 package main;
 
 import number.Complejo;
+import number.Racional;
 import vector.GenericVector;
 
 /**
@@ -44,6 +45,35 @@ public class Main {
 		System.out.println();
 
 		System.out.println(vectorB.resta(vectorA));
+		System.out.println();
+		
+		
+		GenericVector<Racional> vectorARacional = new GenericVector<Racional>(3);
+		vectorARacional.addValue(new Racional(3,4));
+		vectorARacional.addValue(new Racional(3,4));
+		vectorARacional.addValue(new Racional(3,4));
+
+		System.out.println(vectorARacional);
+		System.out.println();
+
+		System.out.println(vectorARacional.multiplicacion(3));
+		System.out.println();
+		
+		System.out.println(vectorARacional.division(2));
+		System.out.println();
+		
+		GenericVector<Racional> vectorBRacional = new GenericVector<Racional>(3);
+		vectorBRacional.addValue(new Racional(3,4));
+		vectorBRacional.addValue(new Racional(3,4));
+		vectorBRacional.addValue(new Racional(3,4));
+
+		System.out.println(vectorBRacional);
+		System.out.println();
+
+		System.out.println(vectorBRacional.suma(vectorARacional));
+		System.out.println();
+
+		System.out.println(vectorBRacional.resta(vectorARacional));
 		System.out.println();
 
 	}
