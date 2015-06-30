@@ -1,4 +1,4 @@
-package rol;
+package persona.rol;
 
 public class Cliente {
 	

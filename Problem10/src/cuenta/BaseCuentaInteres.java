@@ -1,5 +1,7 @@
 package cuenta;
 
+import cuenta.interfaz.InteresInterface;
+
 public abstract class BaseCuentaInteres extends Cuenta implements InteresInterface{
 		
 	private float interes;
@@ -50,7 +52,7 @@ public abstract class BaseCuentaInteres extends Cuenta implements InteresInterfa
 	 * @requires ((getInteres() >=0) && hayInteres())
 	 */
 	@Override
-	public void pagarInteres(){
+	public void pagaInteres(){
 		ingreso(getInteres());
 	}
 }

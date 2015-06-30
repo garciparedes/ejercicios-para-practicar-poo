@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cuenta;
+package cuenta.interfaz;
 
 /**
  * @author garciparedes

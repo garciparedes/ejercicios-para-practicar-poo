@@ -1,6 +1,6 @@
 package cuenta;
 
-import rol.Cliente;
+import persona.rol.Cliente;
 
 public class Cuenta {
 	

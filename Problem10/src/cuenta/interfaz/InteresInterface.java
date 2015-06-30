@@ -1,4 +1,4 @@
-package cuenta;
+package cuenta.interfaz;
 
 public interface InteresInterface {
 	
@@ -14,5 +14,5 @@ public interface InteresInterface {
 	 * 
 	 * @requires (hayInteres())
 	 */
-	public void pagarInteres();
+	public void pagaInteres();
 }

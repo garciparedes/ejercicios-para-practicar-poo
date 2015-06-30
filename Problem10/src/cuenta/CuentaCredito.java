@@ -1,5 +1,7 @@
 package cuenta;
 
+import cuenta.interfaz.ComisionInterface;
+
 public class CuentaCredito extends Cuenta implements ComisionInterface{
 
 	private static float COMISION = 35;
