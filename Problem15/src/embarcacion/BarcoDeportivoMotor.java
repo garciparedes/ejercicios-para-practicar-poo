@@ -18,7 +18,7 @@ public class BarcoDeportivoMotor extends Barco{
 	 * @param matricula Matricula de la embarcacion deportiva.
 	 * @param eslora Eslora medida en metros que tiene la embarcacion deportiva.
 	 * @param fabricacionYear Año de fabricacion de la embarcacion deportiva.
-	 * @param cv Numero de cavallos de vapor que tiene la embarcacion deportiva.
+	 * @param cv Numero de caballos de vapor que tiene la embarcacion deportiva.
 	 */
 	public BarcoDeportivoMotor(String matricula, int eslora, int fabricacionYear
 			, int cv) {
@@ -31,7 +31,7 @@ public class BarcoDeportivoMotor extends Barco{
 	/**
 	 * Setter de cv.
 	 * 
-	 * @param cv Numero de cavallos de vapor que tiene la embarcacion deportiva.
+	 * @param cv Numero de caballos de vapor que tiene la embarcacion deportiva.
 	 */
 	public void setCamarotes(int cv){
 		assert(cv > 0);
@@ -42,7 +42,7 @@ public class BarcoDeportivoMotor extends Barco{
 	/**
 	 * Getter de cv
 	 * 
-	 * @return cv Numero de cavallos de vapor que tiene la embarcacion deportiva.
+	 * @return cv Numero de caballos de vapor que tiene la embarcacion deportiva.
 	 */
 	public int getCamarotes(){
 		return cv;
